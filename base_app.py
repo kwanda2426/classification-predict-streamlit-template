@@ -77,7 +77,7 @@ def main():
 		st.markdown("""
 		Team 10:
 		* **Casper Kruger:** Developed Streamlit App
-		* **Kwanda Mazikubo:** Created Model
+		* **Kwanda Mazibuko:** Created Model
 		* **Lucy Lushaba:** Created Model
 		* **Gudani Mbedzi:** Created Presentation""")
 		
