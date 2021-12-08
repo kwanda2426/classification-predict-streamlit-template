@@ -389,18 +389,18 @@ def main():
 		st.image('Images/f1.jfif', use_column_width=False)
 
 		tweet_text = st.text_area("Enter Text","Type here")
-		Logistic = ("lr.pkl")
-		Random = ("rfc.pkl")
-		Linear = ('lsvc.pkl')
-		XGBmodel = ('xgb.pkl')
+		Logistic = ("lr_model.pkl")
+		Random = ("rfc_model.pkl")
+		Linear = ('lsvc_model.pkl')
+		XGBmodel = ('xgb_model.pkl')
 
 		original_list = [ Logistic, Random, Linear, XGBmodel ]
 		st.info('''
 		Models:
-		* **LogisticRegression Model** = lr.pkl
-		* **RandomForestClassifier Model** = rfc.pkl
-		* **LinearSupportVectorClassifier Model** = lsvc.pkl
-		* **XGBoosterClassifier** = xgb.pkl
+		* **LogisticRegression Model** = lr_model.pkl
+		* **RandomForestClassifier Model** = rfc_model.pkl
+		* **LinearSupportVectorClassifier Model** = lsvc_model.pkl
+		* **XGBoosterClassifier** = xgb_model.pkl
 		''')
 		result = st.selectbox('Select the model you want to use:', original_list)
 
