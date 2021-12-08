@@ -78,7 +78,7 @@ from sklearn.model_selection import train_test_split, KFold, cross_val_score, Gr
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler, PolynomialFeatures
 
 # Vectorizer
-news_vectorizer = open("resources/tfidvec_.pkl","rb")
+news_vectorizer = open("tfidvec_.pkl","rb")
 tweet_cv = joblib.load(news_vectorizer) # loading your vectorizer from the pkl file
 
 # Load your raw data
