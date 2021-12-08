@@ -78,7 +78,7 @@ from sklearn.model_selection import train_test_split, KFold, cross_val_score, Gr
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler, PolynomialFeatures
 
 # Vectorizer
-news_vectorizer = open("resources/tfidfvect.pkl","rb")
+news_vectorizer = open("resources/tfidvec_.pkl","rb")
 tweet_cv = joblib.load(news_vectorizer) # loading your vectorizer from the pkl file
 
 # Load your raw data
@@ -391,16 +391,15 @@ def main():
 		tweet_text = st.text_area("Enter Text","Type here")
 		Logistic = ("lr.pkl")
 		Random = ("rfc.pkl")
-		LogisticRegresionModel = ('resources/Logistic_regression.pkl')
 		Linear = ('lsvc.pkl')
 		XGBmodel = ('xgb.pkl')
 
-		original_list = [ LogisticRegresionModel ,Logistic, Random, Linear, XGBmodel ]
+		original_list = [ Logistic, Random, Linear, XGBmodel ]
 		st.info('''
 		Models:
 		* **LogisticRegression Model** = lr.pkl
 		* **RandomForestClassifier Model** = rfc.pkl
-		* **LinearSupportVectorClassification Model** = lsvc.pkl
+		* **LinearSupportVectorClassifier Model** = lsvc.pkl
 		* **XGBoosterClassifier** = xgb.pkl
 		''')
 		result = st.selectbox('Select the model you want to use:', original_list)
