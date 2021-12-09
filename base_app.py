@@ -183,7 +183,6 @@ def lookup_dict(text, dictionary):
                 text = text.replace(word, dictionary[word.lower()]) 
     return text
 
-st.dataframe(raw)
 
 
 
@@ -203,12 +202,12 @@ def main():
 
 	# Buidling out the "Main" page
 	if selection == "Main":
-		st.title("Team 10 Climate Change Tweet Classification:")
+		st.title("Kasper Classifier:")
 		st.image('Images/CC.png', use_column_width=False)
 		st.markdown("""
 		Team 10:
 		* **Casper Kruger:** Developed Streamlit App
-		* **Kwanda Mazikubo:** Created Model
+		* **Kwanda Mazibuko:** Created Model
 		* **Lucy Lushaba:** Created Model
 		* **Gudani Mbedzi:** Created Presentation""")
 		
@@ -220,6 +219,7 @@ def main():
 	if selection == "EDA":
 		st.title("(EDA), understanding the data!")
 		st.image('Images/eda.jpeg', use_column_width=False)
+		st.dataframe(raw)
 		st.subheader("Using graphs we can understand the data better, so from here we will look at the type of hashtags being used as well as what the data implies:")
 		st.info("""General Information:   
 		* **Pro** = 1     
@@ -302,29 +302,11 @@ def main():
 		*  The anti climate change class has words **hoax**, **scam**, **fake** which might indicate that they believe that climate change/global warming is a hoax.""")
 
 	# Building out the predication page
-	if selection == "Model Performance":
-		st.title("Model Performance:")
+	if selection == "Modelling":
+		st.title("Modelling:")
 		st.image('Images/perform.jpg', use_column_width=False)
-		st.subheader("From hear we can see the Different models we used as well as how they performed:")
-		st.info("Logistic regression works by measuring the relationship between the target variable (what we want to predict) and one or more predictor. It does this by estimating the probabilities with the help of its underlying logistic function. ")
-		st.subheader('It is represented by the equation:')
-		st.latex(r'''y = \left(\frac{e^{b0+b1*x}}{1+e^{b0+b1*x}}\right)
+		st.subheader("From here we can see the different models we used as well as how they performed:")
 		
-		''')
-		# Creating a text box for user input
-		st.info("""General Information: 
-
-		 y = The ouput of the function 
-
-		 b0 = The bias or intercept  
-
-		 e = The base of the natural logarithms 
-
-		 b1 = The coefficient for the input
-
-		 x = The predictor variable
-		""")
-
 		st.header('Each model that we use, with their positives and negatives:')
 
 		col1, col2, col3, col4 = st.columns(4)
@@ -394,7 +376,7 @@ def main():
 		Linear = ('lsvc_model.pkl')
 		XGBmodel = ('xgb_model.pkl')
 
-		original_list = [ Logistic, Random, Linear, XGBmodel ]
+		original_list = [Logistic, Random, Linear, XGBmodel]
 		st.info('''
 		Models:
 		* **LogisticRegression Model** = lr_model.pkl
