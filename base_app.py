@@ -203,7 +203,7 @@ def main():
 	# Buidling out the "Main" page
 	if selection == "Main":
 		st.title("Kasper Classifier:")
-		st.image('Images/App.jpg', use_column_width=True)
+		st.image('Images/App.jpg', use_column_width=False)
 		st.markdown("""
 		Team 10:
 		* **Casper Kruger:** Developed Streamlit App
