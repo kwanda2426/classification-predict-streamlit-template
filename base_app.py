@@ -197,13 +197,13 @@ def main():
 
 	# Creating sidebar with selection box -
 	# you can create multiple pages this way
-	options = ["Main","EDA", "Model Performance"]
+	options = ["Main","EDA", "Modelling"]
 	selection = st.sidebar.selectbox("Choose Option", options)
 
 	# Buidling out the "Main" page
 	if selection == "Main":
 		st.title("Kasper Classifier:")
-		st.image('Images/CC.png', use_column_width=False)
+		st.image('Images/App.png', use_column_width=True)
 		st.markdown("""
 		Team 10:
 		* **Casper Kruger:** Developed Streamlit App
