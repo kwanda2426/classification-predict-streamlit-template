@@ -197,7 +197,7 @@ def main():
 
 	# Creating sidebar with selection box -
 	# you can create multiple pages this way
-	options = ["Main","EDA", "Modelling"]
+	options = ["Main","Understand your data", "Modelling"]
 	selection = st.sidebar.selectbox("Choose Option", options)
 
 	# Buidling out the "Main" page
@@ -216,7 +216,7 @@ def main():
 	
 	
 	# Building out the "Information" page
-	if selection == "EDA":
+	if selection == "Understand your data":
 		st.title("(EDA), understanding the data!")
 		st.image('Images/eda.jpeg', use_column_width=False)
 		st.dataframe(raw)
